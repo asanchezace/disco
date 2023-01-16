@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  
+  <!-- A VR DiscoPub by Alberto Sanchez and Jose L. Rubio and the team of URJC-->
+  
   <head>
     ...
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -10,15 +13,20 @@
   </head>
 
   <body>
-    <a-scene>
+    <a-scene fog="type: exponential; color: #ffaaff; density: 0.250; near: 0; far: 30">
       <!-- Environment -->
 
       <a-sky src="https://cdn.glitch.global/6129616c-d685-405f-9e5a-3869316b8be0/entorno_universidad0001.jpg?v=1655202508267" rotation="0 0 0"></a-sky>
 
       <!-- Light -->
-      <a-light type="point" intensity="5" position="0 2.9 0" color ="#8c004b"></a-light>
+      <a-light type="point" intensity="3" position="0 2.9 0" color ="#8c004b"></a-light>
       <a-light type="point" intensity="1" position="4 2.9 0" color ="#FF0000"></a-light>
-
+      <a-light type="point" intensity="0.5" position="2 2.9 0" color ="#00FFff"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 -2" color ="#04ff16"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 -4" color ="#00deff"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 -6" color ="#FF0000"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 2" color ="#FF00FF"></a-light>
+      <a-light type="point" intensity="0.5" position="2 2.9 4" color ="#FF0000"></a-light>
       <!-- Camera -->
       <a-entity movement-controls="fly: true" position="0 0 4">
         <a-entity camera position="0 1.6 0" look-controls></a-entity>
@@ -26,39 +34,82 @@
         <a-entity laser-controls="hand: right"></a-entity>
       </a-entity>
 
-      <!-- Reference sphere 
+      <!-- Reference sphere
        <a-sphere position="0 0 0" radius="0.5" color="#EF2D5E"></a-sphere>
         -->
 
       <!-- Floor -->
-      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/master/material/floor-texture.jpg" depth="12" height="0.1" width="12" position="0 0 0"></a-box>
+      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/master/material/floor-texture.jpg" depth="40" height="0.1" width="40" position="0 0 0"></a-box>
 
       <!-- Front wall (1) -->
-      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="12" height="3" width="0.5" position="0 1.5 -6" rotation="0 90 0"></a-box>
+      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="40" height="3" width="0.5" position="0 1.5 -6" rotation="0 90 0"></a-box>
 
       <!-- Right wall (2) -->
-      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="12" height="3" width="0.5" position="6 1.5 0" rotation="0 0 0"></a-box>
+      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="40" height="3" width="0.5" position="6 1.5 0" rotation="0 0 0"></a-box>
 
       <!-- Back wall (3) -->
-      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="12" height="3" width="0.5" position="0 1.5 6" rotation="0 90 0"></a-box>
+      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="40" height="3" width="0.5" position="0 1.5 6" rotation="0 90 0"></a-box>
 
       <!-- Techo -->
-      <a-box color="#FFFFFF" depth="12" height="0.1" width="12" position="0 3 0" rotation="180 0 0"></a-box>
-      
-      
-      <!--Sounds-->
+      <a-box color="#FFFFFF" depth="40" height="0.1" width="40" position="0 3 0" rotation="180 0 0"></a-box>
+     
+     
+      <!--Sounds
       <a-sound src="src: url(Material\Soulicious - Dyalla.mp3)" autoplay="true" volume="1" loop="true"></a-sound>
-          
+         -->
 
-      <!--3D--> 
+      <!--3D -->
       <a-assets>
-        <a-asset-item id="discoball" src="/Material\disco_ball_animated.glb"></a-asset-item>
+        <a-asset-item id="discoball" src="https://cdn.glitch.global/59620a10-8ac3-4964-a976-9e9a3919394e/disco_ball.glb?v=1669125475670"></a-asset-item>
       </a-assets>
-    
-      <a-entity gltf-model="#discoball" scale="0.005 0.005 0.005" position="0 2 0"></a-entity>
+   
 
+
+      <a-entity gltf-model="#discoball" scale="1 1 1" position="0 2.5 0" animation-mixer></a-entity>
+
+      <!--El Yeye Bailando 
+      
+      <a-assets>
+        <a-asset-item id="bertinosborne" src="https://cdn.glitch.global/ef0e27ef-4cb7-481c-8901-eb8d0a8e91c0/bertin_hip_hop_dancing_disco.glb?v=1669143458115"></a-asset-item>
+      </a-assets>
+   
+
+
+      <a-entity gltf-model="#bertinosborne" scale="1 1 1" position="2 0 2" ></a-entity>
+      
+      -->
+      
+      <a-assets>
+        <a-asset-item id="bertinosborne" src="https://cdn.glitch.global/ef0e27ef-4cb7-481c-8901-eb8d0a8e91c0/bertin_hip_hop_dancing_disco.glb?v=1669143458115"></a-asset-item>
+      </a-assets>
+      
+      <!--El Yeye Bailando 02-->
+      
+      <a-assets>
+        <a-asset-item id="bertinosborne02" src="https://cdn.glitch.global/ef0e27ef-4cb7-481c-8901-eb8d0a8e91c0/bertin_hip_hop_dancing_disco_002.glb?v=1669205369987"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#bertinosborne02" scale="1 1 1" position="2 0 0" animation-mixer></a-entity>
+      
+      <!--El Yeye Bailando 04-->
+      
+      <a-assets>
+        <a-asset-item id="bertinosborne04" src="https://cdn.glitch.global/ef0e27ef-4cb7-481c-8901-eb8d0a8e91c0/bertin_hip_hop_dancing_disco_002.glb?v=1669205369987"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#bertinosborne04" scale="1 1 1" position="-2 0 -2" rotation="0 -45 0" animation-mixer></a-entity>
+      
+      <!--La Rumbera Dancing 06 High-Speed-->
+
+
+      <!--Perzonaje-->
+      <a-assets> <a-asset-item id="perzonaje" src="Material\character-movement.glb"></a-asset-item> 
+      </a-assets> <a-entity gltf-model="#perzonaje" scale="1 1 1" position="-2 0 -2" rotation="0 -45 0" animation-mixer></a-entity>
+      
       <!--Mobiliario-->
-      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" 
+      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg"
       depth="10" height="1" width="0.5" position="4 0.5 0" rotation="0 0 0"></a-box>
 
 
