@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <a-scene fog="type: exponential; color: #ffaaff; density: 0.250; near: 0; far: 30">
+    <a-scene fog="type: exponential; color: #ff00ff; density: 0.200; near: 0; far: 30">
       <!-- Environment -->
 
       <a-sky src="https://cdn.glitch.global/6129616c-d685-405f-9e5a-3869316b8be0/entorno_universidad0001.jpg?v=1655202508267" rotation="0 0 0"></a-sky>
@@ -28,7 +28,7 @@
       <a-light type="point" intensity="0.5" position="2 2.9 2" color ="#FF00FF"></a-light>
       <a-light type="point" intensity="0.5" position="2 2.9 4" color ="#FF0000"></a-light>
       <!-- Camera -->
-      <a-entity movement-controls="fly: true" position="0 0 4">
+      <a-entity movement-controls="fly: false" position="0 0 4">
         <a-entity camera position="0 1.6 0" look-controls></a-entity>
         <a-entity cursor="rayOrigin:mouse"></a-entity>
         <a-entity laser-controls="hand: right"></a-entity>
@@ -45,7 +45,7 @@
       <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="40" height="3" width="0.5" position="0 1.5 -6" rotation="0 90 0"></a-box>
 
       <!-- Right wall (2) -->
-      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="40" height="3" width="0.5" position="6 1.5 0" rotation="0 0 0"></a-box>
+      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="10" height="3" width="0.5" position="6 1.5 1" rotation="0 0 0"></a-box>
 
       <!-- Back wall (3) -->
       <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg" depth="40" height="3" width="0.5" position="0 1.5 6" rotation="0 90 0"></a-box>
@@ -79,10 +79,6 @@
       
       -->
       
-      <a-assets>
-        <a-asset-item id="bertinosborne" src="https://cdn.glitch.global/ef0e27ef-4cb7-481c-8901-eb8d0a8e91c0/bertin_hip_hop_dancing_disco.glb?v=1669143458115"></a-asset-item>
-      </a-assets>
-      
       <!--El Yeye Bailando 02-->
       
       <a-assets>
@@ -101,19 +97,192 @@
 
       <a-entity gltf-model="#bertinosborne04" scale="1 1 1" position="-2 0 -2" rotation="0 -45 0" animation-mixer></a-entity>
       
+      
+      <!--altavoces-->
+
+      <a-assets>
+        <a-asset-item
+          id="altavoces01"
+          src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/stage_monitor_speaker.glb?v=1673871886168"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-entity
+        gltf-model="#altavoces01"
+        scale="0.01 0.01 0.01"
+        position="0 0 -2"
+                rotation="0 70 0"
+        animation-mixer
+      ></a-entity>
+
+      
+            <!--Rigoberto breakdance-->
+
+      <a-assets>
+        <a-asset-item
+          id="rigoberto01"
+          src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/rigoberto_breakdance.glb?v=1673870990290"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-entity
+        gltf-model="#rigoberto01"
+        scale="1 1 1"
+        position="1 0 -1"
+                rotation="0 70 0"
+        animation-mixer
+      ></a-entity>
+
+      
+      <!--Mario-->
+      <a-assets>
+        <a-asset-item
+          id="mario"
+          src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/mario_animacion.glb?v=1673871749588"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-entity
+        gltf-model="#mario"
+        scale="0.3 0.3 0.3"
+        position="1 -0.5 -3.5"
+                rotation="0 70 0"
+        animation-mixer
+      ></a-entity>
+      
+      
+      <!--La shakira bailando 06-->
+      
+      <a-assets>
+        <a-asset-item id="lashakira" src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/Lucia_Avatar.glb?v=1673871056762"></a-asset-item>
+        <a-asset-item id="personajedavid" src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/david_personaje.glb?v=1673870854053"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#lashakira" scale="1 1 1" position="0 0 0" rotation="0 -90 0" animation-mixer></a-entity>
+      
       <!--La Rumbera Dancing 06 High-Speed-->
+      
+      <a-entity gltf-model="#personajedavid" scale="2 2 2" position="-1.5 0 0" rotation="0 -45 0" animation-mixer></a-entity>
 
+      <!--El piqueton-->
+      
+      <a-assets>
+        <a-asset-item id="elpiqueton" src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/sin_nombre.glb?v=1673871933241"></a-asset-item>
+      </a-assets>
+   
 
-      <!--Perzonaje-->
-      <a-assets> <a-asset-item id="perzonaje" src="Material\character-movement.glb"></a-asset-item> 
-      </a-assets> <a-entity gltf-model="#perzonaje" scale="1 1 1" position="-2 0 -2" rotation="0 -45 0" animation-mixer></a-entity>
+      <a-entity gltf-model="#elpiqueton" scale="1 1 1" position="-3 0 -1" rotation="0 -45 0" animation-mixer></a-entity>
+      
+         <!--Robot Alexito-->
+      
+      <a-assets>
+        <a-asset-item id="robot" src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/dancing_robofish.glb?v=1673872653543"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#robot" scale="0.5 0.5 0.5" position="1 0 1.5" animation-mixer></a-entity>
+      
+      
+      
+      
       
       <!--Mobiliario-->
-      <a-box src="https://raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg"
+      <a-box src="https:/raw.githubusercontent.com/oluisjuan/LongCovid-Pilot/6cb8541bd70d241880310ad02f84dee1ab6ba867/material/darktexture.jpg"
       depth="10" height="1" width="0.5" position="4 0.5 0" rotation="0 0 0"></a-box>
+      
+      <!--El piqueton02-->
+      
+      <a-assets>
+        <a-asset-item id="elpiqueton02" src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/sin_nombre.glb?v=1673871933241"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#elpiqueton02" scale="5 5 5" position="-5 0 -1" rotation="0 45 0" animation-mixer></a-entity>
+
+      
+      <!--Musica Drum$Bass by Jose&Arkaitz-->
+      
+      
+  <a-sound src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/2%20-%20Doser.mp3?v=1673975078456" autoplay="true" position="0 0 0" loop="true"></a-sound>
+
+      
+      <!--Una botella de birra-->
+      
+      <a-assets>
+        <a-asset-item id="unabotella" src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/beer_bottle.glb?v=1673976113007"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#unabotella" scale="0.05 0.05 0.05" position="3.5 0 0" rotation="0 -45 0" animation-mixer></a-entity>
+      
+      
+      <!--La Dama de Baza-->
+      
+      <a-assets>
+        <a-asset-item id="damabaza" src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/dama_de_baza_replica.glb?v=1676398332103"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#damabaza" scale="1.5 1.5 1.5" position="-3.5 0 1" rotation="0 180 0" animation-mixer></a-entity>
+      
+      
+          <!--Las Puertas del Infierno Rodin-->
+      
+      <a-assets>
+        <a-asset-item id="puertainfierno" src="https://cdn.glitch.global/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/gates_of_hell.glb?v=1676399256030"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#puertainfierno" scale="1 1 1" position="0 0 0" rotation="0 0 0" animation-mixer></a-entity>
+      
+      
+      <!--Los Burgueses de Calais Rodin-->
+      
+      <a-assets>
+        <a-asset-item id="burguescalais" src="https://cdn.glitch.me/5cd52e5d-a733-4718-b823-dfe7a6f1a9c9/auguste_rodin_die_burger_von_calais_188486.glb?v=1676399893625"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#burguescalais" scale="1 1 1" position="0 0 0" rotation="0 0 0" animation-mixer></a-entity>
+      
+      
+      
+      
+      <!--Musica McCaulay Curkin
+      
+  <a-sound src="https://www.youtube.com/watch?v=L38Z0YNJfCI" autoplay="true" position="0 0 0" volume="3"></a-sound>
+
+-->
+
+      <!--Videoclip McCaulay Curkin de Mocada i Reixac
+      
+  <a-assets>
+    <video id="mackaulaycurkin" autoplay loop="true" src="https://www.youtube.com/watch?v=L38Z0YNJfCI"></video>
+  </a-assets>
+
+  <!-- Con el asset management system 
+  <a-video src="#mackaulaycurkin" width="3.2" height="1.8" position="0 1 -5"></a-video> -->
+      
+      
+      <!--Musica McCaulay Curkin
+      
+  <a-sound src="https://www.youtube.com/watch?v=L38Z0YNJfCI" autoplay="true" position="0 0 0" volume="3"></a-sound>
+
+-->
+
+      <!--Video Alber -->
+      
+  <a-assets>
+    <video id="video-alber" autoplay loop="true" src="https://cdn.glitch.global/03c023c5-3866-4bc4-8c30-000fd82c4d66/VID_20230215_124353.mp4?v=1676461796739"></video>
+  </a-assets>
+
+  <!-- Con el asset management system -->
+  <a-video src="#video-alber" width="3.2" height="1.8" position="0 1 -5"></a-video> 
 
 
-
+      
+      
     </a-scene>
   </body>
 
